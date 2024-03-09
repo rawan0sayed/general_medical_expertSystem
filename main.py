@@ -62,12 +62,12 @@ def if_not_matched(disease):
     )
     print(treatments + "\n")
 
-#driver function
+# driver function
 if __name__ == "__main__":
     preprocess()
-    #creating class object
+    # creating class object
     engine = Greetings(symptom_map, if_not_matched, get_treatments, get_details)
-    #loop to keep running the code until user says no when asked for another diagnosis
+    # loop to keep running the code until user says no when asked for another diagnosis
     while 1:
         engine.reset()
         engine.run()
