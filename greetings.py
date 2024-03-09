@@ -9,7 +9,7 @@ class Greetings(KnowledgeEngine):
         self.get_treatments = get_treatments
         KnowledgeEngine.__init__(self)
 
-    #code giving instructions on how to use the Expert System
+    # code giving instructions on how to use the Expert System
     @DefFacts()
     def _initial_action(self):
         print("")
@@ -20,7 +20,7 @@ class Greetings(KnowledgeEngine):
         print("")
         yield Fact(action="find_disease")
 
-    #taking various input from user
+    # taking various input from user
     @Rule(Fact(action="find_disease"), NOT(Fact(headache=W())), salience=4)
     def symptom_0(self):
         self.declare(Fact(headache=input("headache: ")))
@@ -73,7 +73,7 @@ class Greetings(KnowledgeEngine):
     def symptom_12(self):
         self.declare(Fact(blurred_vision=input("blurred_vision: ")))
 
-    #different rules checking for each disease match
+    # different rules checking for each disease match
     @Rule(
         Fact(action="find_disease"),
         Fact(headache="no"),
@@ -340,7 +340,7 @@ class Greetings(KnowledgeEngine):
     def disease_13(self):
         self.declare(Fact(disease="Coronavirus"))
 
-    #when the user's input doesn't match any disease in the knowledge base
+    # when the user's input doesn't match any disease in the knowledge base
     @Rule(Fact(action="find_disease"), Fact(disease=MATCH.disease), salience=-998)
     def disease(self, disease):
         print("")

@@ -5,9 +5,9 @@ symptom_map = {}
 d_desc_map = {}
 d_treatment_map = {}
 
-#loads the knowledge from .txt files into variables to allow the code to use it
+# loads the knowledge from .txt files into variables to allow the code to use it
 def preprocess():
-    #global diseases_list, diseases_symptoms, symptom_map, d_desc_map, d_treatment_map
+    # global diseases_list, diseases_symptoms, symptom_map, d_desc_map, d_treatment_map
     diseases = open("diseases.txt")
     diseases_t = diseases.read()
     diseases_list = diseases_t.split("\n")
