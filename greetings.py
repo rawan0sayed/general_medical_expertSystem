@@ -1,4 +1,4 @@
-from experta import *
+from experta import KnowledgeEngine, Rule, DefFacts, Fact, MATCH, NOT, W
 
 class Greetings(KnowledgeEngine):
 
