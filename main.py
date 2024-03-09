@@ -1,4 +1,4 @@
-from greetings import Greetings
+from expert_system import ExpertSystem
 diseases_list = []
 diseases_symptoms = []
 symptom_map = {}

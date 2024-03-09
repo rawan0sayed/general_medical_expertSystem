@@ -1,6 +1,6 @@
 from experta import KnowledgeEngine, Rule, DefFacts, Fact, MATCH, NOT, W
 
-class Greetings(KnowledgeEngine):
+class ExpertSystem(KnowledgeEngine):
 
     def __init__(self, symptom_map, if_not_matched, get_treatments, get_details):
         self.symptom_map = symptom_map
