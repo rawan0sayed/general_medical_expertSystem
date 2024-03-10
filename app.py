@@ -19,17 +19,12 @@ model_args.add_argument("sunken_eyes", type=str, help="sunken_eyes value is requ
 model_args.add_argument("nausea", type=str, help="nausea value is required", required=True)
 model_args.add_argument("blurred_vision", type=str, help="blurred_vision value is required", required=True)
 
-class Engine(Resource):
-    def get(self):
-        return {'hello': 'world'}
-    
+class Model(Resource):
     def post(self):
-        parser = reqparse.RequestParser()
-        parser.add_argument('name', type=str)
-        args = parser.parse_args()
+        args = model_args.parse_args()
         return {'name': args['name']}
     
-api.add_resource(Engine, '/model')
+api.add_resource(Model, '/model')
 
 """
 request: symptoms = { {} }
