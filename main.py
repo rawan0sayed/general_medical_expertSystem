@@ -10,25 +10,25 @@ d_treatment_map = {}
 # loads the knowledge from .txt files into variables to allow the code to use it
 def preprocess():
     # global diseases_list, diseases_symptoms, symptom_map, d_desc_map, d_treatment_map
-    diseases = open("diseases.txt")
+    diseases = open("diseases/diseases.txt")
     diseases_t = diseases.read()
     diseases_list = diseases_t.split("\n")
     diseases.close()
 
     for disease in diseases_list:
-        disease_s_file = open("disease-symptoms/" + disease + ".txt")
+        disease_s_file = open("diseases/symptoms/" + disease + ".txt")
         disease_s_data = disease_s_file.read()
         s_list = disease_s_data.split("\n")
         diseases_symptoms.append(s_list)
         symptom_map[str(s_list)] = disease
         disease_s_file.close()
 
-        disease_s_file = open("disease-descriptions/" + disease + ".txt")
+        disease_s_file = open("diseases/descriptions/" + disease + ".txt")
         disease_s_data = disease_s_file.read()
         d_desc_map[disease] = disease_s_data
         disease_s_file.close()
 
-        disease_s_file = open("disease-treatments/" + disease + ".txt")
+        disease_s_file = open("diseases/treatments/" + disease + ".txt")
         disease_s_data = disease_s_file.read()
         d_treatment_map[disease] = disease_s_data
         disease_s_file.close()
