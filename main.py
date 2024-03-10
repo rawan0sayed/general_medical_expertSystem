@@ -1,79 +1,80 @@
 import packages
 from expert_system import ExpertSystem
 
-diseases_list = []
-diseases_symptoms = []
-symptom_map = {}
-d_desc_map = {}
-d_treatment_map = {}
+class Engine():
+    def __int__(self):
+        self.diseases_list = []
+        self.diseases_symptoms = []
+        self.symptom_map = {}
+        self.d_desc_map = {}
+        self.d_treatment_map = {}
 
-# loads the knowledge from .txt files into variables to allow the code to use it
-def preprocess():
-    # global diseases_list, diseases_symptoms, symptom_map, d_desc_map, d_treatment_map
-    diseases = open("diseases/diseases.txt")
-    diseases_t = diseases.read()
-    diseases_list = diseases_t.split("\n")
-    diseases.close()
+    def preprocess(self):
+        # global diseases_list, diseases_symptoms, symptom_map, d_desc_map, d_treatment_map
+        diseases = open("diseases/diseases.txt")
+        diseases_t = diseases.read()
+        diseases_list = diseases_t.split("\n")
+        diseases.close()
 
-    for disease in diseases_list:
-        disease_s_file = open("diseases/symptoms/" + disease + ".txt")
-        disease_s_data = disease_s_file.read()
-        s_list = disease_s_data.split("\n")
-        diseases_symptoms.append(s_list)
-        symptom_map[str(s_list)] = disease
-        disease_s_file.close()
+        for disease in diseases_list:
+            disease_s_file = open("diseases/symptoms/" + disease + ".txt")
+            disease_s_data = disease_s_file.read()
+            s_list = disease_s_data.split("\n")
+            self.diseases_symptoms.append(s_list)
+            self.symptom_map[str(s_list)] = disease
+            disease_s_file.close()
 
-        disease_s_file = open("diseases/descriptions/" + disease + ".txt")
-        disease_s_data = disease_s_file.read()
-        d_desc_map[disease] = disease_s_data
-        disease_s_file.close()
+            disease_s_file = open("diseases/descriptions/" + disease + ".txt")
+            disease_s_data = disease_s_file.read()
+            self.d_desc_map[disease] = disease_s_data
+            disease_s_file.close()
 
-        disease_s_file = open("diseases/treatments/" + disease + ".txt")
-        disease_s_data = disease_s_file.read()
-        d_treatment_map[disease] = disease_s_data
-        disease_s_file.close()
-
-
-def identify_disease(*arguments):
-    symptom_list = []
-    for symptom in arguments:
-        symptom_list.append(symptom)
-
-    return symptom_map[str(symptom_list)]
+            disease_s_file = open("diseases/treatments/" + disease + ".txt")
+            disease_s_data = disease_s_file.read()
+            self.d_treatment_map[disease] = disease_s_data
+            disease_s_file.close()
 
 
-def get_details(disease):
-    return d_desc_map[disease]
+    def identify_disease(self, *arguments):
+        symptom_list = []
+        for symptom in arguments:
+            symptom_list.append(symptom)
+
+        return self.symptom_map[str(symptom_list)]
 
 
-def get_treatments(disease):
-    return d_treatment_map[disease]
+    def get_details(self, disease):
+        return self.d_desc_map[disease]
 
 
-def if_not_matched(disease):
-    print("")
-    id_disease = disease
-    disease_details = get_details(id_disease)
-    treatments = get_treatments(id_disease)
-    print("")
-    print("The most probable disease that you have is %s\n" % (id_disease))
-    print("A short description of the disease is given below :\n")
-    print(disease_details + "\n")
-    print(
-        "The common medications and procedures suggested by other real doctors are: \n"
-    )
-    print(treatments + "\n")
+    def get_treatments(self, disease):
+        return self.d_treatment_map[disease]
+
+
+    def if_not_matched(self, disease):
+        print("")
+        id_disease = disease
+        disease_details = self.get_details(id_disease)
+        treatments = self.get_treatments(id_disease)
+        print("")
+        print("The most probable disease that you have is %s\n" % (id_disease))
+        print("A short description of the disease is given below :\n")
+        print(disease_details + "\n")
+        print(
+            "The common medications and procedures suggested by other real doctors are: \n"
+        )
+        print(treatments + "\n")
 
 # driver function
-if __name__ == "__main__":
-    preprocess()
-    # creating class object
-    engine = ExpertSystem(symptom_map, if_not_matched, get_treatments, get_details)
-    # loop to keep running the code until user says no when asked for another diagnosis
+# if __name__ == "__main__":
+#     preprocess()
+#     # creating class object
+#     engine = ExpertSystem(symptom_map, if_not_matched, get_treatments, get_details)
+#     # loop to keep running the code until user says no when asked for another diagnosis
     
-    while 1:
-        engine.reset()
-        engine.run()
-        print("Would you like to diagnose some other symptoms?\n Reply yes or no")
-        if input() == "no":
-            exit()
+#     while 1:
+#         engine.reset()
+#         engine.run()
+#         print("Would you like to diagnose some other symptoms?\n Reply yes or no")
+#         if input() == "no":
+#             exit()

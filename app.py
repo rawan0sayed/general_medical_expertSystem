@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
+import main
 
 app = Flask(__name__)
 api = Api(app)
@@ -21,6 +22,17 @@ model_args.add_argument("blurred_vision", type=str, help="blurred_vision value i
 
 class Model(Resource):
     def post(self):
+        preprocess()
+        engine = ExpertSystem(symptom_map, if_not_matched, get_treatments, get_details)
+        # loop to keep running the code until user says no when asked for another diagnosis
+        
+        while 1:
+            engine.reset()
+            engine.run()
+            print("Would you like to diagnose some other symptoms?\n Reply yes or no")
+            if input() == "no":
+                exit()
+
         args = model_args.parse_args()
         return {'name': args['name']}
     
