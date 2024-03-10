@@ -1,4 +1,4 @@
-from random import choice
+# from random import choice
 from expert_system import ExpertSystem
 diseases_list = []
 diseases_symptoms = []

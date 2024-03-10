@@ -16,5 +16,14 @@ class HelloWorld(Resource):
     
 api.add_resource(HelloWorld, '/')
 
+"""
+request: symptoms = { {} }
+response: {
+    "name": "disease",
+    "description": "asdfasdfA",
+    "treatment": "asdfasdfasdFASDF"
+}
+"""
+
 if __name__ == '__main__':
     app.run(debug=True)
