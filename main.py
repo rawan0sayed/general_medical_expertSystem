@@ -1,5 +1,6 @@
-# from random import choice
+import packages
 from expert_system import ExpertSystem
+
 diseases_list = []
 diseases_symptoms = []
 symptom_map = {}
