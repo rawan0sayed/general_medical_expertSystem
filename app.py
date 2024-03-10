@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
-import main
+import packages
+from expert_system import ExpertSystem
+from controller import Controller
 
 app = Flask(__name__)
 api = Api(app)
@@ -22,30 +24,17 @@ model_args.add_argument("blurred_vision", type=str, help="blurred_vision value i
 
 class Model(Resource):
     def post(self):
-        preprocess()
-        engine = ExpertSystem(symptom_map, if_not_matched, get_treatments, get_details)
-        # loop to keep running the code until user says no when asked for another diagnosis
+        newCont = Controller()
+        newCont.preprocess()
+        engine = ExpertSystem(newCont.symptom_map, newCont.if_not_matched, newCont.get_treatments, newCont.get_details)
         
-        while 1:
-            engine.reset()
-            engine.run()
-            print("Would you like to diagnose some other symptoms?\n Reply yes or no")
-            if input() == "no":
-                exit()
+        engine.reset()
+        engine.run()
 
         args = model_args.parse_args()
         return {'name': args['name']}
     
 api.add_resource(Model, '/model')
-
-"""
-request: symptoms = { {} }
-response: {
-    "name": "disease",
-    "description": "asdfasdfA",
-    "treatment": "asdfasdfasdFASDF"
-}
-"""
 
 if __name__ == '__main__':
     app.run(debug=True)

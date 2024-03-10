@@ -2,12 +2,14 @@ from experta import KnowledgeEngine, Rule, DefFacts, Fact, MATCH, NOT, W
 
 class ExpertSystem(KnowledgeEngine):
 
-    def __init__(self, symptom_map, if_not_matched, get_treatments, get_details):
+    def __init__(self, symptom_map, if_not_matched, get_treatments, get_details, Symptoms):
         self.symptom_map = symptom_map
         self.if_not_matched = if_not_matched
         self.get_details = get_details
         self.get_treatments = get_treatments
         KnowledgeEngine.__init__(self)
+
+        self.symptoms = Symptoms
 
     # code giving instructions on how to use the Expert System
     @DefFacts()
@@ -23,55 +25,55 @@ class ExpertSystem(KnowledgeEngine):
     # taking various input from user
     @Rule(Fact(action="find_disease"), NOT(Fact(headache=W())), salience=4)
     def symptom_0(self):
-        self.declare(Fact(headache=input("headache: ")))
+        self.declare(Fact(headache=self.symptoms.headache))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(back_pain=W())), salience=1)
     def symptom_1(self):
-        self.declare(Fact(back_pain=input("back pain: ")))
+        self.declare(Fact(back_pain=self.symptoms.back_pain))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(chest_pain=W())), salience=1)
     def symptom_2(self):
-        self.declare(Fact(chest_pain=input("chest pain: ")))
+        self.declare(Fact(chest_pain=self.symptoms.chest_pain))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(cough=W())), salience=3)
     def symptom_3(self):
-        self.declare(Fact(cough=input("cough: ")))
+        self.declare(Fact(cough=self.symptoms.cough))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(fainting=W())), salience=1)
     def symptom_4(self):
-        self.declare(Fact(fainting=input("fainting: ")))
+        self.declare(Fact(fainting=self.symptoms.fainting))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(fatigue=W())), salience=1)
     def symptom_5(self):
-        self.declare(Fact(fatigue=input("fatigue: ")))
+        self.declare(Fact(fatigue=self.symptoms.fatigue))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(sunken_eyes=W())), salience=1)
     def symptom_6(self):
-        self.declare(Fact(sunken_eyes=input("sunken eyes: ")))
+        self.declare(Fact(sunken_eyes=self.symptoms.sunken_eyes))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(low_body_temp=W())), salience=1)
     def symptom_7(self):
-        self.declare(Fact(low_body_temp=input("low body temperature: ")))
+        self.declare(Fact(low_body_temp=self.symptoms.low_body_temp))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(restlessness=W())), salience=1)
     def symptom_8(self):
-        self.declare(Fact(restlessness=input("restlessness: ")))
+        self.declare(Fact(restlessness=self.symptoms.restlessness))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(sore_throat=W())), salience=1)
     def symptom_9(self):
-        self.declare(Fact(sore_throat=input("sore throat: ")))
+        self.declare(Fact(sore_throat=self.symptoms.sore_throat))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(fever=W())), salience=1)
     def symptom_10(self):
-        self.declare(Fact(fever=input("fever: ")))
+        self.declare(Fact(fever=self.symptoms.fever))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(nausea=W())), salience=1)
     def symptom_11(self):
-        self.declare(Fact(nausea=input("nausea: ")))
+        self.declare(Fact(nausea=self.symptoms.nausea))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(blurred_vision=W())), salience=1)
     def symptom_12(self):
-        self.declare(Fact(blurred_vision=input("blurred_vision: ")))
+        self.declare(Fact(blurred_vision=self.symptoms.blurred_vision))
 
     # different rules checking for each disease match
     @Rule(
