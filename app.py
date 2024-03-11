@@ -22,22 +22,6 @@ api = Api(app)
 # model_args.add_argument("nausea", type=bool, help="nausea value is required", required=True)
 # model_args.add_argument("blurred_vision", type=bool, help="blurred_vision value is required", required=True)
 
-base_data = {
-    "headache": True,
-    "back_pain": True,
-    "chest_pain": False,
-    "cough": True,
-    "fainting": True,
-    "sore_throat": False,
-    "fatigue": False,
-    "restlessness": True,
-    "low_body_temp": False,
-    "fever": True,
-    "sunken_eyes": False,
-    "nausea": False,
-    "blurred_vision": True
-}
-
 # def get(self):
     # return 'Hello World', 200
     # newCont = Controller()
@@ -57,6 +41,21 @@ base_data = {
 #             return False
 #     return True
 
+base_data = {
+    "headache": True,
+    "back_pain": True,
+    "chest_pain": False,
+    "cough": True,
+    "fainting": True,
+    "sore_throat": False,
+    "fatigue": False,
+    "restlessness": True,
+    "low_body_temp": False,
+    "fever": True,
+    "sunken_eyes": False,
+    "nausea": False,
+    "blurred_vision": True
+}
 
 
 class Model(Resource):
@@ -66,8 +65,8 @@ class Model(Resource):
         parser.add_argument("age", type=int, help="age value is required", required=True)
         data = parser.parse_args()
         return data, 201
-        # return "Passed", 200
-        return json.dumps({'response_status': 'Matched'})
+
+
 api.add_resource(Model, '/api')
 
 if __name__ == '__main__':
