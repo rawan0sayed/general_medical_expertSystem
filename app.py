@@ -1,3 +1,4 @@
+import json
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
 # import packages
@@ -40,24 +41,25 @@ class Model(Resource):
             "blurred_vision": True
         }
 
-    def Matched(self, raw_data):
+    def matched(self, raw_data):
         for key in raw_data:
             if raw_data[key] != self.base_data[key]:
                 return False
         return True
 
-    def POST(self):
+    def post(self):
         # newCont = Controller()
         # newCont.preprocess()
         # engine = ExpertSystem(newCont.symptom_map, newCont.if_not_matched, newCont.get_treatments, newCont.get_details)
         # engine.reset()
         # engine.run()
-        
+
         raw_data = model_args.parse_args()
-        if self.Matched(raw_data):
-            return {'response_status': 'Matched'}
+        
+        if self.matched(raw_data):
+            return json.dumps({'response_status': 'Matched'})
         else:
-            return {'response_status': 'Not Matched'}
+            return json.dumps({'response_status': 'Not Matched'})
     
 api.add_resource(Model, '/api')
 

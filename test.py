@@ -16,10 +16,11 @@ data = {
     "blurred_vision": True
 }
 
-BASE = "http://127.0.0.1:5000/"
+BASE = "http://127.0.0.1:5000"
 
 def test():
-    return requests.POST(BASE + '/api', data)
+    response = requests.post(BASE + '/api', data, headers={"Content-Type": "application/json"})
+    return response.json()
 
 if __name__ == "__main__":
     print("Getting response from server...\n", test())
