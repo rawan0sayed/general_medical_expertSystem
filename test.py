@@ -1,5 +1,7 @@
 import requests
 
+BASE = "http://127.0.0.1:5000"
+
 data = {
     "headache": True,
     "back_pain": True,
@@ -16,12 +18,11 @@ data = {
     "blurred_vision": True
 }
 
-BASE = "http://127.0.0.1:5000"
+data = {
+    "name": "Ismail",
+    "age": 22
+}
 
-def test():
-    response = requests.post(BASE + '/api', data, headers={"Content-Type": "application/json"})
-    return response.json()
+response = requests.get(BASE + "/api", data=data)
 
-if __name__ == "__main__":
-    print("Getting response from server...\n", test())
-    print("Everything passed")
+print( response.json() )
