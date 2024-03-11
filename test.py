@@ -1,8 +1,9 @@
 import requests
+import json
 
 BASE = "http://127.0.0.1:5000"
 
-data = {
+user_data = {
     "headache": True,
     "back_pain": True,
     "chest_pain": False,
@@ -15,14 +16,16 @@ data = {
     "fever": True,
     "sunken_eyes": False,
     "nausea": False,
-    "blurred_vision": True
+    "blurred_vision": False
+    # "blurred_vision": True
 }
 
-data = {
-    "name": "Ismail",
-    "age": 22
-}
-
-response = requests.get(BASE + "/api", data=data)
+response = requests.post(
+    url=BASE + "/api",
+    headers={"Content-Type": "application/json"},
+    data=json.dumps(user_data),
+)
 
 print( response.json() )
+
+# curl -X POST http://127.0.0.1:5000/api -H 'Content-Type: application/json' -d '{"name": "hello", "age": 22}'
