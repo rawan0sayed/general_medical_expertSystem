@@ -24,13 +24,12 @@ model_args.add_argument("blurred_vision", type=str, help="blurred_vision value i
 
 class Model(Resource):
     def post(self):
-        newCont = Controller()
-        newCont.preprocess()
-        engine = ExpertSystem(newCont.symptom_map, newCont.if_not_matched, newCont.get_treatments, newCont.get_details)
+        # newCont = Controller()
+        # newCont.preprocess()
+        # engine = ExpertSystem(newCont.symptom_map, newCont.if_not_matched, newCont.get_treatments, newCont.get_details)
+        # engine.reset()
+        # engine.run()
         
-        engine.reset()
-        engine.run()
-
         args = model_args.parse_args()
         return {'name': args['name']}
     
