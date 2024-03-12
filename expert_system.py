@@ -392,7 +392,6 @@ class ExpertSystem(KnowledgeEngine):
         nausea,
         blurred_vision,
     ):
-        print("\nThe bot did not find any diseases that match your exact symptoms.")
         lis = [
             headache,
             back_pain,
