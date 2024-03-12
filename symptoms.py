@@ -1,4 +1,4 @@
-{
+symptoms = {
     "fever": True,
     "cough": True,
     "runny_nose": True,
