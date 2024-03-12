@@ -64,6 +64,3 @@ if __name__ == "__main__":
 
     engine = ExpertSystem(patient_data)
     result = engine.run()
-
-    print("The patient is likely suffering from", result["name"])
-    print("The recommended treatment is:", result["treatment"])
