@@ -28,7 +28,7 @@ symptoms = {
     "dehydration": True
 }
 
-symptoms = [
+arguments = [
     "fever",
     "cough",
     "runny_nose",
