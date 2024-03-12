@@ -52,5 +52,5 @@ class KnowledgeBase:
             {
                 'name': 'Diarrheal Diseases',
                 'symptoms': ['abdominal_pain', 'diarrhea', 'vomiting', 'dehydration'],
-                'treatment': 'Stay hydrated, eat bland foods, and avoid dairy and fatty foods. Seek medical attention if symptoms persist or worsen.' }
+                'treatment': 'Stay hydrated, eat bland foods, and avoid dairy and fatty foods. Seek medical attention if symptoms persist or worsen.' },
         ]

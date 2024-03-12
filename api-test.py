@@ -2,7 +2,8 @@ import requests
 import json
 
 # BASE = "https://medical-es.vercel.app"
-BASE = "http://127.0.0.1:5000"
+# BASE = "http://127.0.0.1:5000"
+BASE = "https://medical-es-api.vercel.app"
 
 user_data = {
     "fever": True,
@@ -31,7 +32,7 @@ user_data = {
     "facial_pain": True,
     "headache": True,
     "nasal_congestion": True,
-    "dehydration": True
+    "dehydration": True,
 }
 
 response = requests.post(
