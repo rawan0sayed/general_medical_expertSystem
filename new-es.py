@@ -4,6 +4,7 @@ class ExpertSystem:
     def __init__(self, patient_symptoms):
         self.symptoms = patient_symptoms
         self.diseases = KnowledgeBase().diseases
+        self.result = {}
 
     def calculate_shared_symptoms(self, disease_symptoms):
         total_shared_severity = 0
@@ -63,4 +64,6 @@ if __name__ == "__main__":
 
     engine = ExpertSystem(patient_data)
     result = engine.run()
-    print(result)
+
+    print("The patient is likely suffering from", result["name"])
+    print("The recommended treatment is:", result["treatment"])
