@@ -11,11 +11,12 @@ api = Api(app)
 def home():
     return flask.render_template('index.html')
 
+
 class Model(Resource):
     def __init__(self):
         self.parser = reqparse.RequestParser()
         for arg in arguments:
-            self.parser.add_argument(arg, type=bool, help=f"{arg} value is required", required=False, default=False)
+            self.parser.add_argument(arg, type=bool, help=f"{arg} value is required", required=True, default=False)
             
     def post(self):
         patient_data = self.parser.parse_args()
