@@ -5,11 +5,11 @@ from flask_restful import Api, Resource, reqparse
 # from expert_system import ExpertSystem
 # from controller import Controller
 
-# newCont = Controller()
-# newCont.preprocess()
-# engine = ExpertSystem(newCont.symptom_map, newCont.if_not_matched, newCont.get_treatments, newCont.get_details)
-# engine.reset()
-# engine.run()
+newCont = Controller()
+newCont.preprocess()
+engine = ExpertSystem(newCont.symptom_map, newCont.if_not_matched, newCont.get_treatments, newCont.get_details)
+engine.reset()
+engine.run()
 
 app = flask.Flask(__name__)
 api = Api(app)
@@ -51,7 +51,6 @@ class Model(Resource):
             "blurred_vision": True
         }
     
-
     def matched(self, raw_data):
         for key in raw_data:
             if raw_data[key] != self.base_data[key]:
