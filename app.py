@@ -14,6 +14,9 @@ from flask_restful import Api, Resource, reqparse
 app = Flask(__name__)
 api = Api(app)
 
+@app.route('/', methods=['GET'])
+def get():
+    Flask.render_template('index.html')
 
 class Model(Resource):
     def __init__(self):
