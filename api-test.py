@@ -1,7 +1,8 @@
 import requests
 import json
 
-BASE = "https://medical-es.vercel.app"
+# BASE = "https://medical-es.vercel.app"
+BASE = "http://127.0.0.1:5000"
 
 user_data = {
     "fever": True,
@@ -42,8 +43,7 @@ response = requests.post(
     data=json.dumps(user_data),
 )
 
-api_rs = response.json()
-print(api_rs)
+print( response.json() )
 
 # curl -X POST http://127.0.0.1:5000/api -H 'Content-Type: application/json' -d '{"name": "hello", "age": 22}'
 # curl -X POST https://medicales.vercel.app/api -H 'Content-Type: application/json' -d '{"name": "hello", "age": 22}'
