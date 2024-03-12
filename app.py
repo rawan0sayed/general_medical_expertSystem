@@ -1,4 +1,4 @@
-from flask import Flask
+import flask
 from flask_restful import Api, Resource, reqparse
 
 # import packages
@@ -11,12 +11,12 @@ from flask_restful import Api, Resource, reqparse
 # engine.reset()
 # engine.run()
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 api = Api(app)
 
 @app.route('/', methods=['GET'])
-def get():
-    Flask.render_template('index.html')
+def home():
+    return flask.render_template('index.html')
 
 class Model(Resource):
     def __init__(self):
@@ -71,4 +71,4 @@ class Model(Resource):
 api.add_resource(Model, '/api')
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
