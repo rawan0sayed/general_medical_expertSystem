@@ -23,7 +23,9 @@ class ExpertSystem:
                 likely_disease = disease
         return {
             "name": likely_disease["name"],
+            "description": likely_disease["description"],
             "treatment": likely_disease["treatment"],
+            "symptoms": likely_disease["symptoms"],
         }
 
     def run(self):
