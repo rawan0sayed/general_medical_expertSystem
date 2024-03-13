@@ -16,7 +16,7 @@ arguments = [
     "itchy_eyes",
     "frequent_urination",
     "unexplained_weight_loss",
-    "dehydration"
+    "dehydration",
     "difficulty_breathing",
     "difficulty_sleeping",
     "blisters",
