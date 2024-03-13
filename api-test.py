@@ -3,7 +3,7 @@ import json
 
 # BASE = "https://medical-es.vercel.app"
 # BASE = "http://127.0.0.1:5000"
-BASE = "https://medical-es-api.vercel.app"
+BASE = "https://medicales.vercel.app"
 
 user_data = {
     "fever": 1,
@@ -23,7 +23,7 @@ user_data = {
     "itchy_eyes": 1,
     "frequent_urination": 1,
     "unexplained_weight_loss": 1,
-    "dehydration"
+    "dehydration": 1,
     "difficulty_breathing": 0,
     "difficulty_sleeping": 0,
     "blisters": 0,
