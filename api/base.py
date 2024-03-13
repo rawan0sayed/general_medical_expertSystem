@@ -35,7 +35,7 @@ class KnowledgeBase:
                 'treatment': 'Avoid allergens, take antihistamines, and use nasal sprays as prescribed.' },
             {
                 'name': 'Measles',
-                'symptoms': ['high_fever', 'cough', 'rash', 'sore_throat'],
+                'symptoms': ['fever', 'cough', 'rash', 'sore_throat'],
                 'treatment': 'Rest, stay hydrated, and take fever-reducing medication. Seek medical attention if complications arise.' },
             {
                 'name': 'Hand, Foot, and Mouth Disease',
