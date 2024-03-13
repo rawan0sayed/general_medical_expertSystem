@@ -23,33 +23,4 @@ arguments = [
     "excessive_thirst",
     "nasal_congestion",
     "headache",
-
-    # "facial_pain",
-    # "high_fever",
-    # "wheezing",
-]
-
-new_args = [
-    "fever",
-    "cough" ,
-    "rash",
-    "sore_throat",
-    "runny_nose" ,
-    "diarrhea",
-    "vomiting",
-    "fatigue",
-    "itchiness",
-    "ear_pain",
-    "body_aches",
-    "swollen_glands",
-    "vomiting",
-    "diarrhea",
-    "swollen glands",
-    "abdominal_pain",
-    "sneezing",
-    "itchy_eyes",
-    "excessive_thirst",
-    "frequent urination",
-    "dehydration",
-    "unexpected weight loss",
 ]
