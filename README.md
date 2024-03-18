@@ -4,7 +4,7 @@ This is an Expert System Shell written in Python using [experta](https://pypi.or
 
 ## Installation
 
-Use the below command to install all requirements of the project and then run ```main.py```.
+Use the below command to install all requirements of the project and then run ```app.py```.
 
 ```bash
 pip install -r requirements.txt
@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-Type ```python main.py``` in the command line to run the program and enter yes/no/high/low according to whatever symptom you have.
+Type ```python app.py``` in the command line to run the program and enter yes/no according to whatever symptom you have.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
