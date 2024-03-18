@@ -33,9 +33,7 @@ user_data = {
 
 response = requests.post(
     url=BASE + "/api",
-    headers={
-        "Content-Type": "application/json"
-    },
+    headers={"Content-Type": "application/json"},
     data=json.dumps(user_data),
 )
 
