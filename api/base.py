@@ -67,4 +67,40 @@ class KnowledgeBase:
                 'description': 'Diarrheal diseases are gastrointestinal infections that cause frequent loose stools, abdominal cramps, and sometimes vomiting and fever. They can be caused by viruses, bacteria, or parasites.',
                 'treatment': 'Stay hydrated with clear fluids such as water, broth, or oral rehydration solutions to replace lost fluids and electrolytes. Eat bland foods like bananas, rice, and toast, and avoid dairy and fatty foods. Seek medical attention if symptoms persist or worsen.'
             },
+            {
+        'name': 'Coronary Artery Disease (CAD)',
+        'symptoms': ['chest_pain', 'shortness_of_breath', 'heart_attack'],
+        'description': 'Coronary artery disease is a condition characterized by the narrowing or blockage of the coronary arteries, usually caused by atherosclerosis. Symptoms can include chest pain (angina), shortness of breath, and heart attack.',
+        'treatment': 'Lifestyle changes such as a healthy diet, regular exercise, and smoking cessation. Medications like statins, beta-blockers, and aspirin. Medical procedures including angioplasty, stent placement, and coronary artery bypass surgery.'
+    },
+    {
+        'name': 'Heart Failure',
+        'symptoms': ['shortness_of_breath', 'fatigue', 'swelling', 'rapid_heartbeat'],
+        'description': 'Heart failure, also known as congestive heart failure, occurs when the heart is unable to pump blood efficiently. Symptoms include shortness of breath, fatigue, swelling in the legs, ankles, and feet, and a rapid or irregular heartbeat.',
+        'treatment': 'Lifestyle changes such as a low-sodium diet, fluid restriction, and regular exercise. Medications like ACE inhibitors, beta-blockers, and diuretics. Devices such as pacemakers and defibrillators. Surgery may include heart valve repair or replacement.'
+    },
+    {
+        'name': 'Arrhythmia',
+        'symptoms': ['palpitations', 'dizziness', 'shortness_of_breath', 'fainting'],
+        'description': 'Arrhythmia refers to an irregular heartbeat, which can be too fast, too slow, or erratic. Symptoms may include palpitations, dizziness, shortness of breath, and fainting.',
+        'treatment': 'Medications like antiarrhythmics and beta-blockers. Procedures such as electrical cardioversion, catheter ablation, and the implantation of pacemakers or defibrillators. Lifestyle changes to avoid triggers and manage underlying conditions.'
+    },
+    {
+        'name': 'Hypertension (High Blood Pressure)',
+        'symptoms': ['headaches', 'shortness_of_breath', 'nosebleeds'],
+        'description': 'Hypertension, or high blood pressure, is a condition where the force of the blood against the artery walls is too high. It often has no symptoms, but when present, can include headaches, shortness of breath, and nosebleeds.',
+        'treatment': 'Lifestyle changes such as a healthy diet, regular exercise, weight loss, and reducing salt intake. Medications like diuretics, ACE inhibitors, and calcium channel blockers.'
+    },
+    {
+        'name': 'Myocardial Infarction (Heart Attack)',
+        'symptoms': ['chest_pain', 'shortness_of_breath', 'nausea', 'cold_sweats'],
+        'description': 'A myocardial infarction, commonly known as a heart attack, occurs when blood flow to a part of the heart is blocked for a long enough time that part of the heart muscle is damaged or dies. Symptoms include chest pain, shortness of breath, nausea, and cold sweats.',
+        'treatment': 'Immediate treatment includes aspirin, nitroglycerin, and clot-busting medications. Long-term treatment involves lifestyle changes, medications like beta-blockers and ACE inhibitors, and possibly medical procedures such as angioplasty and coronary artery bypass surgery.'
+    },
+    {
+        'name': 'Atrial Fibrillation (AFib)',
+        'symptoms': ['irregular_heartbeat', 'palpitations', 'fatigue', 'shortness_of_breath'],
+        'description': 'Atrial fibrillation is an irregular, often rapid heart rate that commonly causes poor blood flow. Symptoms include an irregular heartbeat, palpitations, fatigue, and shortness of breath.',
+        'treatment': 'Medications to control heart rate and reduce stroke risk (such as blood thinners). Procedures like electrical cardioversion and catheter ablation. Lifestyle changes to manage triggers and underlying conditions.'
+    },
         ]
