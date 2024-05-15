@@ -23,4 +23,16 @@ arguments = [
     "excessive_thirst",
     "nasal_congestion",
     "headache",
+    "chest_pain",
+    "shortness_of_breath",
+    "heart_attack",
+    "swelling",
+    "rapid_heartbeat",
+    "palpitations",
+    "dizziness",
+    "fainting",
+    "nosebleeds",
+    "nausea",
+    "cold_sweats",
+    "irregular_heartbeat"
 ]
