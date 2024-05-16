@@ -1,4 +1,4 @@
-arguments = [
+arg = [
     "fever",
     "cough",
     "runny_nose",
@@ -14,14 +14,14 @@ arguments = [
     "ear_pain",
     "sneezing",
     "itchy_eyes",
-    "frequent_urination",
-    "unexplained_weight_loss",
-    "dehydration",
+    "wheezing",
     "difficulty_breathing",
     "difficulty_sleeping",
     "blisters",
     "excessive_thirst",
-    "nasal_congestion",
+    "frequent_urination",
+    "unexplained_weight_loss",
+    "dehydration",
     "headache",
     "chest_pain",
     "shortness_of_breath",
@@ -31,8 +31,6 @@ arguments = [
     "palpitations",
     "dizziness",
     "fainting",
-    "nosebleeds",
     "nausea",
-    "cold_sweats",
-    "irregular_heartbeat"
+    "blurred_vision"
 ]
