@@ -1,7 +1,7 @@
 class KnowledgeBase:
     def __init__(self):
         self.diseases = [
-              {
+            {
                 'name': 'Common Cold',
                 'symptoms': ['fever', 'cough', 'runny_nose', 'sore_throat', 'fatigue'],
                 'description': 'The common cold is a viral infection of the upper respiratory tract. It is characterized by symptoms such as sneezing, nasal congestion, sore throat, and mild fever.',
@@ -33,7 +33,7 @@ class KnowledgeBase:
             },
             {
                 'name': 'Asthma',
-                'symptoms': ['cough', 'wheezing', 'difficulty_breathing'],
+                'symptoms': ['cough', 'shortness_of_breath'],
                 'description': 'Asthma is a chronic respiratory condition characterized by inflammation and narrowing of the airways, leading to wheezing, shortness of breath, chest tightness, and coughing.',
                 'treatment': 'Use inhalers as prescribed to control symptoms and prevent asthma attacks. Avoid triggers such as allergens and irritants, and seek medical help if symptoms worsen despite treatment.'
             },
@@ -57,13 +57,13 @@ class KnowledgeBase:
             },
             {
                 'name': 'Hand, Foot, and Mouth Disease',
-                'symptoms': ['fever', 'sore_throat', 'rash', 'blisters'],
+                'symptoms': ['fever', 'sore_throat', 'rash'],
                 'description': 'Hand, foot, and mouth disease is a viral infection common in children under 5 years old. It is characterized by fever, sore throat, rash, and blisters on the hands, feet, and mouth.',
                 'treatment': 'Rest, stay hydrated, and use over-the-counter pain relievers to reduce fever and discomfort. Avoid close contact with others to prevent spread. Symptoms usually resolve on their own within a week.'
             },
             {
                 'name': 'Diabetes',
-                'symptoms': ['excessive_thirst', 'frequent_urination', 'fatigue', 'unexplained_weight_loss'],
+                'symptoms': ['excessive_thirst', 'frequent_urination', 'fatigue'],
                 'description': 'Diabetes is a chronic condition characterized by high blood sugar levels due to insufficient production of insulin (Type 1 diabetes) or the body\'s inability to use insulin effectively (Type 2 diabetes). Symptoms of high blood sugar include frequent urination, increased thirst, and unexplained weight loss.',
                 'treatment': 'Monitor blood sugar levels regularly, adhere to a balanced diet, take insulin or oral medications as prescribed, exercise regularly, and maintain a healthy lifestyle. Regular medical check-ups are essential for proper management of diabetes.'
             },
@@ -146,3 +146,4 @@ class KnowledgeBase:
                 'treatment': 'Psychotherapy, medications like anti-anxiety drugs or antidepressants, lifestyle changes, and stress management techniques.'
             }
         ]
+
