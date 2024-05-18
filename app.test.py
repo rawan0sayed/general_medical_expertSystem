@@ -2,7 +2,7 @@ import requests
 import json
 
 # BASE = "http://127.0.0.1:5000"
-BASE = "https://general-medical.vercel.app"
+BASE = "https://general-eosin.vercel.app"
 
 user_data = {
     "fever": 1,
