@@ -11,7 +11,6 @@ api = Api(app)
 def home():
     return flask.render_template('index.html')
 
-
 class Model(Resource):
     def __init__(self):
         self.parser = reqparse.RequestParser()
@@ -20,14 +19,8 @@ class Model(Resource):
             
     def post(self):
         patient_data = self.parser.parse_args()
-
         engine = ExpertSystem(patient_data)
         result = engine.run()
         return result
 
-
-api.add_resource(Model, '/api')
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+api.add_resource(Model, '/api/model')
