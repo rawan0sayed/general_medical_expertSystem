@@ -144,6 +144,6 @@ class KnowledgeBase:
                 'symptoms': ['excessive_worry', 'restlessness', 'fatigue', 'difficulty_concentrating'],
                 'description': 'Anxiety disorders are characterized by excessive fear or anxiety. Symptoms include excessive worry, restlessness, fatigue, and difficulty concentrating.',
                 'treatment': 'Psychotherapy, medications like anti-anxiety drugs or antidepressants, lifestyle changes, and stress management techniques.'
-            }
+            },
         ]
 
