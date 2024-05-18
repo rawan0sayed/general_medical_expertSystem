@@ -1,4 +1,4 @@
-arg = [
+arguments = [
     "fever",
     "cough",
     "runny_nose",
@@ -32,5 +32,5 @@ arg = [
     "dizziness",
     "fainting",
     "nausea",
-    "blurred_vision"
+    "blurred_vision",
 ]
