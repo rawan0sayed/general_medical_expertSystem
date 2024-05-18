@@ -55,12 +55,7 @@ class KnowledgeBase:
                 'description': 'Measles is a highly contagious viral infection characterized by high fever, cough, runny nose, rash, and red, watery eyes. Complications can include pneumonia, encephalitis, and death.',
                 'treatment': 'Rest, stay hydrated, and take fever-reducing medication. Seek medical attention if complications such as pneumonia or encephalitis arise. Vaccination with the measles, mumps, and rubella (MMR) vaccine can prevent measles.'
             },
-            {
-                'name': 'Hand, Foot, and Mouth Disease',
-                'symptoms': ['fever', 'sore_throat', 'rash'],
-                'description': 'Hand, foot, and mouth disease is a viral infection common in children under 5 years old. It is characterized by fever, sore throat, rash, and blisters on the hands, feet, and mouth.',
-                'treatment': 'Rest, stay hydrated, and use over-the-counter pain relievers to reduce fever and discomfort. Avoid close contact with others to prevent spread. Symptoms usually resolve on their own within a week.'
-            },
+         
             {
                 'name': 'Diabetes',
                 'symptoms': ['excessive_thirst', 'frequent_urination', 'fatigue'],
